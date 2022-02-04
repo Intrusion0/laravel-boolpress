@@ -26,6 +26,24 @@ body {
     align-items: center;
     width: 60%;
     margin: 0 auto;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            margin-bottom: 10px;
+
+            &.btn.btn-success {
+                max-width: 100px;
+                margin: 5px auto;
+            }
+        }
+    }
+
+    hr {
+        width: 40%;
+    }
 }
 
 // Header - Footer

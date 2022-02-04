@@ -10981,6 +10981,24 @@ body {
   margin: 0 auto;
 }
 
+.container-home form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-home form input {
+  margin-bottom: 10px;
+}
+
+.container-home form input.btn.btn-success {
+  max-width: 100px;
+  margin: 5px auto;
+}
+
+.container-home hr {
+  width: 40%;
+}
+
 header,
 footer {
   text-align: center;
