@@ -63,6 +63,15 @@ body {
     }
 }
 
+// Page Create
+.container-create {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
 // Header - Footer
 header, footer {
     text-align: center;

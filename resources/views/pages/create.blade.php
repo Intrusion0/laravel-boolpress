@@ -9,7 +9,7 @@
 
     @else
 
-    <form action="{{ route('store') }}" method="POST">
+    <form class="container-create" action="{{ route('store') }}" method="POST">
 
         @method('POST')
         @csrf

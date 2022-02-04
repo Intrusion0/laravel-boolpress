@@ -44,7 +44,7 @@
         <h2>POSTS LIST</h2>
 
         <span class="new-post">
-            <a href="#">CREATE NEW POST</a>
+            <a href="{{ route('create') }}">CREATE NEW POST</a>
         </span>
 
         <ol class="list-group list-group-numbered">

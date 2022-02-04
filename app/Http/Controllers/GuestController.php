@@ -16,11 +16,22 @@ class GuestController extends Controller
 
     public function create() {
 
-        
+        return view('pages.create');
     }
 
-    public function store() {
+    public function store(Request $request) {
 
-        
+        $data = $request->validate([
+            'title' => 'required|string',
+            'author' => 'required|string',
+            'description' => 'nullable|string',
+            'pubblication_date' => 'required|date',
+            'like' => 'required|integer|min:0|max:1000000',
+            'comments' => 'required|integer|min:0|max:1000000'
+        ]);
+
+        Post::create($data);
+
+        return redirect()->route('home');
     }
 }
