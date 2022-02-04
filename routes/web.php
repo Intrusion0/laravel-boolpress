@@ -28,3 +28,8 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 
 // Logout
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+// Create - Store
+Route::get('/post/create', 'GuestController@create')->name('create');
+
+Route::post('/post/store', 'GuestController@store')->name('store');

@@ -13,4 +13,14 @@ class GuestController extends Controller
 
         return view('pages.home', compact('posts'));
     }
+
+    public function create() {
+
+        
+    }
+
+    public function store() {
+
+        
+    }
 }
