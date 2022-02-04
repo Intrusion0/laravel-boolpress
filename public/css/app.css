@@ -10962,3 +10962,28 @@ a.text-dark:focus {
   }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: purple;
+  color: #fff;
+}
+
+.container-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
+}
+
+header,
+footer {
+  text-align: center;
+  font-size: 35px;
+}
+

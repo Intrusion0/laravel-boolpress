@@ -6,3 +6,30 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// General rules
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: purple;
+    color: #fff;
+}
+
+// HomePage
+.container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+}
+
+// Header - Footer
+header, footer {
+    text-align: center;
+    font-size: 35px;
+}
