@@ -41,6 +41,18 @@
 
         @else
 
+        <h2>POSTS LIST</h2>
+
+        <span class="new-post">
+            <a href="#">CREATE NEW POST</a>
+        </span>
+
+        <ol class="list-group list-group-numbered">
+            @foreach ($posts as $post)
+                <li class="list-group-item">Title: <span>{{ $post->title }}</span> - Author: <span>{{ $post->author }}</span></li>
+            @endforeach
+        </ol>
+
         @endguest
 
     </div>

@@ -44,6 +44,23 @@ body {
     hr {
         width: 40%;
     }
+
+    ol {
+
+        li {
+            color: #000;
+            font-size: 20px;
+
+            span {
+                color: lightslategrey;
+            }
+        }
+    }
+
+    span.new-post {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
 }
 
 // Header - Footer

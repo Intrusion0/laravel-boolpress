@@ -10999,6 +10999,20 @@ body {
   width: 40%;
 }
 
+.container-home ol li {
+  color: #000;
+  font-size: 20px;
+}
+
+.container-home ol li span {
+  color: lightslategrey;
+}
+
+.container-home span.new-post {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
 header,
 footer {
   text-align: center;
