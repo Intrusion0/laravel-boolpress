@@ -26,6 +26,14 @@
         <input type="number" name="like">
         <label for="comments">Comments</label>
         <input type="number" name="comments">
+        
+        <label for="category_id">Category</label>
+        <select class="form-select" name="category_id">
+            @foreach ($categories as $category)
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+            @endforeach
+        </select>
+
         <input type="submit" value="CREA">
 
     </form>

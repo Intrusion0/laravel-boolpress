@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,9 @@ class HomeController extends Controller
 
     public function create() {
 
-        return view('pages.create');
+        $categories = Category::all();
+
+        return view('pages.create', compact('categories'));
     }
 
     public function store(Request $request) {
@@ -43,7 +46,13 @@ class HomeController extends Controller
             'comments' => 'required|integer|min:0|max:1000000'
         ]);
 
-        Post::create($data);
+        $category = Category::findOrFail($request->get('category_id'));
+
+        $post = Post::make($data);
+
+        $post->category()->associate($category);
+        $post->save();
+        
 
         return redirect()->route('home');
     }
