@@ -15,7 +15,7 @@ class AddForeingKeys extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
 
-            $table->foreign('catagory_id', 'posts_category')->references('id')->on('categories');
+            $table->foreign('category_id', 'posts_category')->references('id')->on('categories');
         });
     }
 

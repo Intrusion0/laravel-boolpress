@@ -15,7 +15,7 @@ class Post extends Model
         'pubblication_date',
         'like',
         'comments',
-        'catagory_id'
+        'category_id'
     ];
 
     public function category() {
