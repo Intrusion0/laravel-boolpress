@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->date('pubblication_date');
             $table->integer('like')->unsigned()->default(0);
             $table->integer('comments')->unsigned()->default(0);
+            $table->bigInteger('catagory_id')->unsigned();
 
             $table->timestamps();
         });
