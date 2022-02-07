@@ -30,6 +30,6 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
 // Create - Store
-Route::get('/post/create', 'GuestController@create')->name('create');
+Route::get('/post/create', 'HomeController@create')->name('create');
 
-Route::post('/post/store', 'GuestController@store')->name('store');
+Route::post('/post/store', 'HomeController@store')->name('store');
