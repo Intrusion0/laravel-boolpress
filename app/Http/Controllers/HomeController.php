@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\Tag;
 
 class HomeController extends Controller
 {
@@ -31,8 +32,9 @@ class HomeController extends Controller
     public function create() {
 
         $categories = Category::all();
+        $tags = Tag::all();
 
-        return view('pages.create', compact('categories'));
+        return view('pages.create', compact('categories', 'tags'));
     }
 
     public function store(Request $request) {
@@ -46,13 +48,17 @@ class HomeController extends Controller
             'comments' => 'required|integer|min:0|max:1000000'
         ]);
 
-        $category = Category::findOrFail($request->get('category_id'));
-
+        
         $post = Post::make($data);
-
+        
+        $category = Category::findOrFail($request->get('category_id'));
         $post->category()->associate($category);
         $post->save();
-        
+
+
+        $tag = Tag::findOrFail($request->get('tags'));
+        $post->tags()->attach($tag);
+        $post->save();
 
         return redirect()->route('home');
     }

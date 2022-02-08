@@ -48,6 +48,8 @@ body {
     ol {
 
         li {
+            display: flex;
+            flex-direction: column;
             color: #000;
             font-size: 20px;
 
@@ -73,6 +75,18 @@ body {
 
     select {
         margin-bottom: 10px;
+    }
+
+    .container-tags {
+        display: block;
+
+        input[type="checkbox"] {
+            margin: 0 10px 10px 0;
+        }
+    }
+
+    input[type="submit"] {
+        margin-top: 15px;
     }
 }
 

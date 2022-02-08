@@ -49,7 +49,14 @@
 
         <ol class="list-group list-group-numbered">
             @foreach ($posts as $post)
-                <li class="list-group-item">Title: <span>{{ $post->title }}</span> - Author: <span>{{ $post->author }}</span> - Category: <span>{{ $post->category->name }}</span></li>
+                <li class="list-group-item">
+                    Title <span>{{ $post->title }}</span>
+                    Author <span>{{ $post->author }}</span>
+                    Category <span>{{ $post->category->name }}</span>
+                    Tags @foreach ($post->tags as $tag)
+                            <span>{{ $tag->name }}</span>
+                        @endforeach
+                </li>
             @endforeach
         </ol>
 

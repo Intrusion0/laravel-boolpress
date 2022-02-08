@@ -11000,6 +11000,8 @@ body {
 }
 
 .container-home ol li {
+  display: flex;
+  flex-direction: column;
   color: #000;
   font-size: 20px;
 }
@@ -11023,6 +11025,18 @@ body {
 
 .container-create select {
   margin-bottom: 10px;
+}
+
+.container-create .container-tags {
+  display: block;
+}
+
+.container-create .container-tags input[type=checkbox] {
+  margin: 0 10px 10px 0;
+}
+
+.container-create input[type=submit] {
+  margin-top: 15px;
 }
 
 header,
