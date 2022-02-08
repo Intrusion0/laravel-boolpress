@@ -17,6 +17,13 @@ class AddForeingKeys extends Migration
 
             $table->foreign('category_id', 'posts_category')->references('id')->on('categories');
         });
+
+        Schema::table('post_tag', function (Blueprint $table) {
+
+            $table->foreign('post_id', 'posts_tags')->references('id')->on('posts');
+            $table->foreign('tag_id', 'tags_posts')->references('id')->on('tags');
+        });
+        
     }
 
     /**
@@ -29,6 +36,12 @@ class AddForeingKeys extends Migration
         Schema::table('posts', function (Blueprint $table) {
 
             $table->dropForeign('posts_category');
+        });
+
+        Schema::table('post_tag', function (Blueprint $table) {
+
+            $table->dropForeign('posts_tags');
+            $table->dropForeign('tags_posts');
         });
     }
 }
