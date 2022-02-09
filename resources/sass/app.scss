@@ -56,6 +56,11 @@ body {
             span {
                 color: lightslategrey;
             }
+
+            a.btn.btn-primary {
+                max-width: 70px;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -65,28 +70,36 @@ body {
     }
 }
 
-// Page Create
-.container-create {
+// Page Create/edit
+.container-create, .container-edit {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     margin: 0 auto;
 
-    select {
-        margin-bottom: 10px;
-    }
-
     .container-tags {
+        width: auto;
         display: block;
+        padding: 10px 0;
 
         input[type="checkbox"] {
+            width: auto;
             margin: 0 10px 10px 0;
         }
     }
 
     input[type="submit"] {
         margin-top: 15px;
+    }
+
+    input, textarea, select {
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        height: 100px;
     }
 }
 

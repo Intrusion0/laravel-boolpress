@@ -11010,12 +11010,18 @@ body {
   color: lightslategrey;
 }
 
+.container-home ol li a.btn.btn-primary {
+  max-width: 70px;
+  margin-top: 10px;
+}
+
 .container-home span.new-post {
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.container-create {
+.container-create,
+.container-edit {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11023,20 +11029,37 @@ body {
   margin: 0 auto;
 }
 
-.container-create select {
-  margin-bottom: 10px;
-}
-
-.container-create .container-tags {
+.container-create .container-tags,
+.container-edit .container-tags {
+  width: auto;
   display: block;
+  padding: 10px 0;
 }
 
-.container-create .container-tags input[type=checkbox] {
+.container-create .container-tags input[type=checkbox],
+.container-edit .container-tags input[type=checkbox] {
+  width: auto;
   margin: 0 10px 10px 0;
 }
 
-.container-create input[type=submit] {
+.container-create input[type=submit],
+.container-edit input[type=submit] {
   margin-top: 15px;
+}
+
+.container-create input,
+.container-create textarea,
+.container-create select,
+.container-edit input,
+.container-edit textarea,
+.container-edit select {
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+.container-create textarea,
+.container-edit textarea {
+  height: 100px;
 }
 
 header,

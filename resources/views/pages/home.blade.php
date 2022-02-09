@@ -56,6 +56,7 @@
                     Tags @foreach ($post->tags as $tag)
                             <span>{{ $tag->name }}</span>
                         @endforeach
+                    <a class="btn btn-primary" href="{{ route('post.edit', $post->id) }}">EDIT</a>
                 </li>
             @endforeach
         </ol>

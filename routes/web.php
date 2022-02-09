@@ -29,7 +29,10 @@ Route::post('/login', 'Auth\LoginController@login')->name('login');
 // Logout
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-// Create - Store
+// Route Create/Store
 Route::get('/post/create', 'HomeController@create')->name('create');
-
 Route::post('/post/store', 'HomeController@store')->name('store');
+
+// Route Edit/Update
+Route::get('/post/edit/{id}', 'HomeController@edit')->name('post.edit');
+Route::post('/post/update/{id}', 'HomeController@update')->name('post.update');

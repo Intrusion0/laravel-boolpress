@@ -62,4 +62,14 @@ class HomeController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function edit($id) {
+
+        $categories = Category::all();
+        $tags = Tag::all();
+
+        $post = Post::findOrFail($id);
+
+        return view('pages.edit', compact('categories', 'tags', 'post'));
+    }
 }
