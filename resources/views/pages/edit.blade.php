@@ -9,7 +9,7 @@
 
     @else
 
-    <form class="container-edit" action="#" method="POST"> {{-- {{ route('update') }} --}}
+    <form class="container-edit" action="{{ route('post.update', $post->id) }}" method="POST">
 
         @method('POST')
         @csrf

@@ -72,4 +72,32 @@ class HomeController extends Controller
 
         return view('pages.edit', compact('categories', 'tags', 'post'));
     }
+
+    public function update(Request $request, $id) {
+
+        $data = $request->validate([
+            'title' => 'required|string',
+            'author' => 'required|string',
+            'description' => 'nullable|string',
+            'pubblication_date' => 'required|date',
+            'like' => 'required|integer|min:0|max:1000000',
+            'comments' => 'required|integer|min:0|max:1000000'
+        ]);
+
+        $post = Post::findOrFail($id);
+
+        $post->update($data);
+
+        $category = Category::findOrFail($request->get('category_id'));
+        $post->category()->associate($category);
+        $post->save();
+
+
+        $tag = Tag::findOrFail($request->get('tags'));
+        $post->tags()->sync($tag);
+        $post->save();
+
+        return redirect()->route('home');
+
+    }
 }
