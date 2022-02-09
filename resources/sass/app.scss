@@ -56,10 +56,15 @@ body {
             span {
                 color: lightslategrey;
             }
+            
+            .container-btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            a.btn.btn-primary {
-                max-width: 70px;
-                margin-top: 10px;
+                a.btn.btn-primary {
+                    margin: 0 10px;
+                }
             }
         }
     }

@@ -56,7 +56,10 @@
                     Tags @foreach ($post->tags as $tag)
                             <span>{{ $tag->name }}</span>
                         @endforeach
-                    <a class="btn btn-primary" href="{{ route('post.edit', $post->id) }}">EDIT</a>
+                    <div class="container-btn">
+                        <a class="btn btn-primary" href="{{ route('post.edit', $post->id) }}">EDIT</a>
+                        <a class="btn btn-danger" href="{{ route('post.delete', $post->id) }}">DELETE</a>
+                    </div>
                 </li>
             @endforeach
         </ol>

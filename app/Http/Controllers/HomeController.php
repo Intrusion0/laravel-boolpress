@@ -100,4 +100,15 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
+
+    public function delete($id) {
+
+        $post = Post::findOrFail($id);
+        $post->tags()->sync([]);
+        $post->save();
+
+        $post->delete();
+        
+        return redirect()->route('home');
+    }
 }

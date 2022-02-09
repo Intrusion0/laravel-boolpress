@@ -36,3 +36,6 @@ Route::post('/post/store', 'HomeController@store')->name('store');
 // Route Edit/Update
 Route::get('/post/edit/{id}', 'HomeController@edit')->name('post.edit');
 Route::post('/post/update/{id}', 'HomeController@update')->name('post.update');
+
+// Route Delete
+Route::get('/post/delete/{id}', 'HomeController@delete')->name('post.delete');
